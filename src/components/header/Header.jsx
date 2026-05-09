@@ -1,23 +1,25 @@
 import React, { useState } from "react";
 import "./Header.css";
 
-function Header() {
-  const [searchTerm, setSearchTerm] = useState("");
+function Header({ searchTerm, setSearchTerm, images, setImages }) {
+  console.log(images);
 
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value);
-    console.log(e.target.value);
+    // console.log(e.target.value);
   };
 
-  //client_id=YOUR_ACCESS_KEY
   const handleSubmit = (e) => {
     e.preventDefault();
     const api_url = "https://api.unsplash.com/search/photos";
     const api_key = import.meta.env.VITE_UNSPLASH_KEY;
+    const per_page = 20;
 
-    fetch(`${api_url}?per_page=20&query=${searchTerm}&client_id=${api_key}`)
-      .then((data) => data.json())
-      .then((data) => console.log(data))
+    fetch(
+      `${api_url}?query=${searchTerm}&client_id=${api_key}&per_page=${per_page}`,
+    )
+      .then((response) => response.json())
+      .then((data) => setImages(data.results))
       .catch((error) => console.log(error));
     setSearchTerm("");
   };

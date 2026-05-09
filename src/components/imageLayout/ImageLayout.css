@@ -1,0 +1,30 @@
+.image-layout {
+  padding: 2rem 0;
+}
+.image-layout .image-wrapper {
+  width: 100%;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem; */
+  column-count: 3;
+  column-gap: 0.5rem;
+  break-inside: avoid;
+}
+
+img {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 900px) {
+  .image-layout .image-wrapper {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .image-layout .image-wrapper {
+    column-count: 1;
+  }
+}
