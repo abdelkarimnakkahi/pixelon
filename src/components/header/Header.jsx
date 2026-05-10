@@ -28,11 +28,9 @@ function Header({ searchTerm, setSearchTerm, images, setImages }) {
     <header>
       <div className="container">
         <h1>Explore beautiful free images</h1>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia,
-          facilis!
-        </p>
+        <p>High-quality stock photos, freely usable for any project.</p>
         <form onSubmit={handleSubmit}>
+          {/* Controlled input */}
           <input
             type="text"
             name="search"

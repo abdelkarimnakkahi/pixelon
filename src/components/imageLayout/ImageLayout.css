@@ -3,10 +3,9 @@
 }
 .image-layout .image-wrapper {
   width: 100%;
-  /* display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 1rem; */
-  column-count: 3;
+  /*** implement masonry layout ***/
+  /*** 4 columns on large screens ***/
+  column-count: 4;
   column-gap: 0.5rem;
   break-inside: avoid;
 }
@@ -17,14 +16,55 @@ img {
   margin-bottom: 0.5rem;
 }
 
+/*** 3 columns on 900px and less screens ***/
 @media (max-width: 900px) {
   .image-layout .image-wrapper {
-    column-count: 2;
+    column-count: 3;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  header .container input {
+    width: 30rem;
+  }
+
+  header .container p {
+    font-size: 1rem;
   }
 }
 
+/*** 1 column on 600px and less screens ***/
 @media (max-width: 600px) {
   .image-layout .image-wrapper {
+    column-count: 2;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+
+  header .container input {
+    width: 25rem;
+  }
+
+  header .container p {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-layout .image-wrapper {
     column-count: 1;
+  }
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  header .container input {
+    width: 20rem;
+  }
+
+  header .container p {
+    font-size: 0.75rem;
   }
 }

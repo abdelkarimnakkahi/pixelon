@@ -10,8 +10,9 @@ export default function ImageLayout({ images }) {
             images.map((image, index) => (
               <img
                 key={index}
-                src={image.links.download}
+                src={image.urls.regular}
                 alt={image.alt_description}
+                loading="lazy"
               />
             ))
           ) : (
