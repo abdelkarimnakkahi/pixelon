@@ -1,0 +1,30 @@
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  background: #fff;
+}
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer a {
+  color: #999;
+  font-weight: 600;
+}
+
+footer a:hover {
+  color: rgb(1, 146, 172);
+  font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  footer .container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

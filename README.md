@@ -1,17 +1,75 @@
-# React + Vite
+# Pixelon
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern responsive image gallery built with React and the Unsplash API.  
+Users can search for high-quality images and explore them in a responsive masonry layout with photographer information on hover.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Features
 
-## React Compiler
+- 🔍 Search images using the Unsplash API
+- 🖼️ Responsive masonry image layout
+- 👤 Photographer information overlay on hover
+- ❤️ Display image likes
+- ⚡ Lazy-loaded images for better performance
+- 📱 Fully responsive design
+- 🎨 Smooth hover effects and modern UI
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-"# pixelon" 
+- React
+- JavaScript (ES6+)
+- CSS3
+- Unsplash API
+- Vite
+
+---
+
+## 📸 Preview
+
+![Homepage Screenshot](./src/assets/preview.png)
+
+---
+
+## 📂 Project Structure
+
+```bash
+src/
+│
+├── components/
+│   ├── footer/
+│   ├── header/
+│   └── imageLayout/
+│
+├── App.jsx
+├── main.jsx
+└── index.css
+```
+
+## ⚙️ Installation
+
+Clone the repository:
+
+git clone https://github.com/your-username/your-repo-name.git
+
+Navigate to the project folder:
+
+cd your-repo-name
+
+Install dependencies:
+
+npm install
+
+Start the development server:
+
+npm run dev
+
+## 🔑 Environment Variables
+
+VITE_UNSPLASH_KEY=your_api_key_here
+
+Get your API key from:
+
+[Unsplash Developers](https://unsplash.com/developers)

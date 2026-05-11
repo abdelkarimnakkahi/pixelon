@@ -16,6 +16,7 @@ function App() {
         setImages={setImages}
       />
       <ImageLayout images={images} setImages={setImages} />
+      <Footer />
     </>
   );
 }
